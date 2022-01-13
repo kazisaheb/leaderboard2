@@ -125,6 +125,9 @@ top blogs
 .course_info span {
   color: orange;
 }
+.stars {
+  font-weight: bolder;
+}
 .duration {
   background-color: rgba(255, 68, 0, 0.205);
   padding: 0 5px;

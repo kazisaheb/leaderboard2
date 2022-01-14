@@ -40,7 +40,7 @@ nav h1 {
   line-height: 65px;
 }
 .menu a:hover {
-  background-color: #3535fb;
+  background-color: black;
 }
 /* ==================== */
 #click,
@@ -49,34 +49,6 @@ nav h1 {
   display: none;
 }
 
-/* ---------
-Nav media
------------- */
-@media only screen and (max-width: 530px) {
-  .menu {
-    flex-direction: column;
-    position: absolute;
-    top: 65px;
-    background: rgba(1, 1, 195, 0.822);
-    width: 50%;
-    margin: 0 50%;
-    display: none;
-  }
-  #drop,
-  #click:checked ~ .menu {
-    display: flex;
-  }
-
-  #click:checked ~ #drop {
-    display: none;
-  }
-  #click:checked ~ #cross {
-    display: block;
-  }
-}
-/* ----------------
-end media
----------------- */
 .round_img {
   width: 60px;
   height: 60px;
@@ -124,8 +96,10 @@ top blogs
   align-items: center;
 }
 .rect_img {
-  width: 150px;
-  height: auto;
+  width: 185px;
+}
+.course_img {
+  width: 235px;
 }
 .blog img {
   margin-right: 20px;
@@ -179,4 +153,48 @@ footer {
   color: white;
   text-align: center;
   padding: 5px 0;
+}
+
+@media only screen and (max-width: 540px) {
+  /* -------------------
+  body media
+  -------------------- */
+  .players {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .player {
+    flex-direction: column;
+  }
+
+  .course,
+  .course_img {
+    width: 100%;
+  }
+  /* ---------
+Navbar media
+------------ */
+  .menu {
+    flex-direction: column;
+    position: absolute;
+    top: 65px;
+    background: rgba(1, 1, 195, 0.822);
+    width: 50%;
+    margin: 0 50%;
+    display: none;
+  }
+  #drop,
+  #click:checked ~ .menu {
+    display: flex;
+  }
+
+  #click:checked ~ #drop {
+    display: none;
+  }
+  #click:checked ~ #cross {
+    display: block;
+  }
+  /* ----------------
+end media
+---------------- */
 }

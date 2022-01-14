@@ -1,6 +1,8 @@
 /* --------google fonts-------- */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
-
+* {
+  transition: all 0.5s ease-out;
+}
 /* Common styles */
 body {
   margin: 0;
@@ -24,6 +26,8 @@ nav .logo {
 nav h1 {
   font-size: 40px;
   line-height: 0;
+  margin-right: 15px;
+  text-align: center;
 }
 .menu {
   display: flex;
@@ -32,28 +36,47 @@ nav h1 {
 .menu a {
   text-decoration: none;
   color: white;
-  margin: 0 20px;
   padding: 0 30px;
   line-height: 65px;
 }
 .menu a:hover {
-  background-color: #0202df;
+  background-color: #3535fb;
 }
-.dropdown {
+/* ==================== */
+#click,
+#drop,
+#cross {
   display: none;
 }
+
 /* ---------
 Nav media
 ------------ */
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 530px) {
   .menu {
+    flex-direction: column;
+    position: absolute;
+    top: 65px;
+    background: rgba(1, 1, 195, 0.822);
+    width: 50%;
+    margin: 0 50%;
     display: none;
   }
-  .dropdown {
+  #drop,
+  #click:checked ~ .menu {
+    display: flex;
+  }
+
+  #click:checked ~ #drop {
+    display: none;
+  }
+  #click:checked ~ #cross {
     display: block;
   }
-  /* --------------------- */
 }
+/* ----------------
+end media
+---------------- */
 .round_img {
   width: 60px;
   height: 60px;
